@@ -27,3 +27,11 @@ for (let counter = 1; counter <= sumNumber; counter++) {
     result = counter + result;
 } 
 console.log(result);
+
+// 4. Вивести числа від 10 до 50, які кратні 5
+
+for (let counter = 10; counter <= 50; counter++) {
+    if (counter % 5 == 0) {
+        console.log(counter);
+    }
+}
