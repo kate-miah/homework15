@@ -35,3 +35,56 @@ for (let counter = 10; counter <= 50; counter++) {
         console.log(counter);
     }
 }
+
+// 5. Намалювати в консолі символами “*” трикутник заданого користувачем розміру
+
+let str = '';
+for (let k = 1; k <= 7; k++) {
+    for (let i = 1; i < k; i++) {
+        str += '*';
+    }
+    str += '\n';
+}
+console.log(str)
+
+// 6. Намалювати пустий квадрат з діагоналлю (зліва зверху - до права низу)
+
+let userDiagonalPrompt = Number(prompt('Ведіть розмір квадрату'));
+
+ drawDiagonalSquare(userDiagonalPrompt);
+
+ function drawDiagonalSquare(dimension) {
+        let str = '';
+    for (let j = 0; j < dimension; j++){
+        for (let i = 0; i < dimension; i++) {
+            if (j === 0 || j === dimension - 1 || i === 0 || i === dimension - 1 || j === i) {  
+                str += '@ ';
+            } else {
+                str += '  ';
+            }            
+        }
+        str += '\n';
+    }
+    console.log(str);
+ }
+
+ // 7. Задачка з *: Зробити квадрат зі зворотньою діагоналлю (з правого верхнього до лівого нижнього)
+
+ let userReverseDiagonalPrompt = Number(prompt('Ведіть ще раз розмір квадрату'));
+
+ drawReverseDiagonalSquare(userReverseDiagonalPrompt);
+
+ function drawReverseDiagonalSquare(dimension) {
+        let str = '';
+    for (let j = 0; j < dimension; j++){
+        for (let i = 0; i < dimension; i++) {
+            if (j === 0 || j === dimension - 1 || i === 0 || i === dimension - 1 || j + i === dimension - 1) {  
+                str += '@ ';
+            } else {
+                str += '  ';
+            }            
+        }
+        str += '\n';
+    }
+    console.log(str);
+ }
